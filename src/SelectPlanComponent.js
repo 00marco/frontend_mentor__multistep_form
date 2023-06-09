@@ -8,7 +8,7 @@ function SelectPlanComponent() {
 
     return (
         <>
-            <div className="grid grid-rows-[1fr,1fr,1fr,1fr,1fr,auto] bg-white px-7 py-10 gap-3">
+            <div className="grid grid-rows-5 bg-white px-7 py-10 gap-3">
                 <div>
                     <h1 className="font-bold text-2xl text-blue-900">Select your plan</h1> 
                     <p>You have the option of monthly or yearly billing</p> 
@@ -49,14 +49,6 @@ function SelectPlanComponent() {
                             pointer-events-none inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
                         />
                     </Switch>
-                </div>
-                <div className="relative">
-                    <Link to="/addOn">
-                        <button className="absolute bottom-0 right-0 bg-blue-950 text-white p-3 rounded-lg" >Button</button>
-                    </Link> 
-                    <Link to="/">
-                        <button className="absolute bottom-0 left-0 bg-blue-950 text-white p-3 rounded-lg" >Go back</button>
-                    </Link>
                 </div>
                  
             </div>
