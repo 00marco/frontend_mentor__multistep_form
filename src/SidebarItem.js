@@ -20,7 +20,7 @@ function SidebarItem() {
                     </div>
                 </div>
                 :
-                <div className="flex justify-center items-center rounded-full bg-slate-400 h-[50px] w-[50px]">1</div>
+                <div className="flex justify-center items-center rounded-full bg-slate-400 h-[40px] w-[40px]">1</div>
             }
             
         </>

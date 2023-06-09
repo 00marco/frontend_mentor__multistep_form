@@ -1,8 +1,8 @@
 function InputFormComponent() {
     return (  
-        <div className="bg-white p-3">
-            <label className="block text-sm font-bold text-blue-900" for="nameId">Placeholder</label>
-            <input className="border rounded-s p-1 px-3" id="nameId" type="text" placeholder="Placeholder"></input>
+        <div className="bg-white">
+            <label className="block text-sm font-semibold text-blue-900" for="nameId">Placeholder</label>
+            <input className="border rounded-s p-2 px-3 text-gray-500" id="nameId" type="text" placeholder="Placeholder"></input>
         </div> 
     );
 }
