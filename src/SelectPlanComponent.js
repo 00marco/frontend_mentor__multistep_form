@@ -1,41 +1,61 @@
 import { Link } from "react-router-dom";
+import { Switch } from '@headlessui/react'
+import { useState } from 'react'
+
 
 function SelectPlanComponent() {
+  const [enabled, setEnabled] = useState(false)
+
     return (
         <>
-            <div className="grid grid-rows-[1fr,1fr,1fr,1fr,1fr,1fr,2fr] bg-red-50 gap-2">
-                <div>Select your plan</div> 
-                <div>You have the option of monthly or yearly billing</div> 
-                <div className="grid grid-cols-[1fr,3fr] border">
+            <div className="grid grid-rows-[1fr,1fr,1fr,1fr,1fr,auto] bg-white px-7 py-10 gap-3">
+                <div>
+                    <h1 className="font-bold text-2xl text-blue-900">Select your plan</h1> 
+                    <p>You have the option of monthly or yearly billing</p> 
+                </div>
+                <div className="grid grid-cols-[100px,3fr] border p-3">
                     <div>Icon</div>
                     <div>
                         <div>Arcade</div>
                         <div>$9/mo</div>
                     </div>
                 </div>
-                <div className="grid grid-cols-[1fr,3fr] border">
+                <div className="grid grid-cols-[100px,3fr] border p-3">
                     <div>Icon</div>
                     <div>
                         <div>Advanced</div>
                         <div>$12/mo</div>
                     </div>
                 </div>
-                <div className="grid grid-cols-[1fr,3fr] border">
+                <div className="grid grid-cols-[100px,3fr] border p-3">
                     <div>Icon</div>
                     <div>
                         <div>Pro</div>
                         <div>$15/mo</div>
                     </div>
                 </div>
-                <div>
-                    Monthly - Yearly
+                <div className="grid justify-center items-center">
+                    <p>Monthly</p>
+                    <Switch
+                        checked={enabled}
+                        onChange={setEnabled}
+                        className={`${enabled ? 'bg-teal-900' : 'bg-teal-700'}
+                        relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+                    >
+                        <span className="sr-only">Use setting</span>
+                        <span
+                        aria-hidden="true"
+                        className={`${enabled ? 'translate-x-9' : 'translate-x-0'}
+                            pointer-events-none inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+                        />
+                    </Switch>
                 </div>
                 <div className="relative">
                     <Link to="/addOn">
-                        <button className="absolute bottom-0 right-0 bg-blue-950 text-white p-3" >Button</button>
+                        <button className="absolute bottom-0 right-0 bg-blue-950 text-white p-3 rounded-lg" >Button</button>
                     </Link> 
                     <Link to="/">
-                        <button className="absolute bottom-0 left-0 bg-blue-950 text-white p-3" >Go back</button>
+                        <button className="absolute bottom-0 left-0 bg-blue-950 text-white p-3 rounded-lg" >Go back</button>
                     </Link>
                 </div>
                  

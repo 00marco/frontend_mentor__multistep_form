@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function AddOnComponent() {
     return (
         <>
-            <div className="grid grid-rows-[1fr,1fr,1fr,1fr,1fr,2fr] bg-red-50 gap-2">
+            <div className="grid grid-rows-[1fr,1fr,1fr,1fr,1fr,2fr] bg-red-50 px-7 py-10 gap-1">
                 <div>Pick your add-ons</div> 
                 <div>Add-ons help enhance your gaming experience</div> 
                 <div>Online service. Access to multiplayer games</div>
